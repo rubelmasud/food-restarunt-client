@@ -1,3 +1,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.active {
+    color: greenyellow;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight: 700;
+}
+
+.default {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px;
+    color: wheat;
+}
+
+.logo {
+    font-style: italic;
+    font-weight: 700;
+}
+
+.banner {
+    padding: 10px 0px;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0.685)), url(./Images/vincentsinterjers.png);
+    background-position: top bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.search {
+    border: 1px solid greenyellow;
+    border-radius: 10px;
+    padding: 2px 5px;
+    margin-bottom: 10px;
+}
+
+.blog-card {
+    border: 1px dashed white;
+    background-color: rgba(105, 105, 105, 0.836);
+    color: wheat;
+    font-weight: 400;
+    margin: 20px 10px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.headding {
+    color: bisque;
+    font-size: x-large;
+}
