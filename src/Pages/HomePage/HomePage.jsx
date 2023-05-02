@@ -30,7 +30,7 @@ const HomePage = () => {
             </div>
             <main className=''>
                 {/* foods section */}
-                <div className="mt-28 mx-12 bg-slate-100 px-6 rounded">
+                <div className="mt-36 mx-12 bg-slate-100 px-6 rounded">
                     <h1 className='text-center text-3xl font-bold underline pt-6 my-12'>My Restaurant Foods !!!</h1>
                     <FoodSlider></FoodSlider>
                 </div>
@@ -50,7 +50,7 @@ const HomePage = () => {
                         }
                     </div>
                 </div>
-                {/* about us section */}
+                {/* about section */}
                 <AboutUs></AboutUs>
             </main>
         </>

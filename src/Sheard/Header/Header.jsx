@@ -60,7 +60,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/login'><button className="btn btn-warning hover:btn-outline mx-5 btn-sm px-4">Login</button></Link>
+                <Link to='login'><button className="btn btn-warning hover:btn-outline mx-5 btn-sm px-4">Login</button></Link>
                 <p>{user && user.name}</p>
             </div>
         </div>
