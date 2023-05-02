@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../Providar/AuthProvider';
 
 const Header = () => {
+
+    const { user } = useContext(AuthContext);
+    console.log(user);
     return (
 
         <div className="navbar w-11/12 mx-auto my-2">
@@ -54,7 +58,8 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link><button className="btn btn-warning  mx-5 btn-sm px-4">Login</button></Link>
+                <Link><button className="btn btn-warning hover:btn-outline mx-5 btn-sm px-4">Login</button></Link>
+                <p>{user && user.name}</p>
             </div>
         </div>
 

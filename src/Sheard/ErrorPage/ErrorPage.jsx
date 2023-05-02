@@ -11,9 +11,9 @@ const ErrorPage = () => {
                 <img src="https://i.ibb.co/YjCbzfX/404-removebg-preview.png" alt="404-removebg-preview" border="0"></img>
             </div>
             <div className=" text-center absolute top-[400px] right-[600px]">
-                <button>
-                    <Link to='/' className='bg-gradient-to-r from-purple-300 from-10% via-gray-500 via-30% to-emerald-300 to-90% rounded-md font-extrabold  px-8 py-3'>Go Back</Link>
-                </button>
+
+                <Link><button className="btn btn-warning hover:btn-outline mx-5 btn-sm px-4">Go back</button></Link>
+
             </div>
         </div>
     );
