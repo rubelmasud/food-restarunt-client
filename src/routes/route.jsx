@@ -3,6 +3,9 @@ import HomeLayout from "../Layouts/Home/HomeLayout";
 import ErrorPage from "../Sheard/ErrorPage/ErrorPage";
 import HomePage from "../Pages/HomePage/HomePage";
 import BlogPage from "../Pages/BlogPage/BlogPage";
+import LoginLayout from "../Layouts/LoginLayout/LoginLayout";
+import LoginPage from "../Pages/LoginPage/LoginPage";
+import RegisterPage from "../Pages/RegisterPage/RegisterPage";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +21,21 @@ const router = createBrowserRouter([
                 path: '/blog',
                 element: <BlogPage></BlogPage>
             }
+        ]
+    },
+    {
+        path: '/login',
+        element: <LoginLayout></LoginLayout>,
+        errorElement: <ErrorPage></ErrorPage>,
+        children: [
+            {
+                path: '/login',
+                element: <LoginPage></LoginPage>
+            },
+            // {
+            //     path: '/register',
+            //     element: <RegisterPage></RegisterPage>
+            // }
         ]
     }
 ])

@@ -33,6 +33,7 @@ const Header = () => {
                             Blogs
                         </NavLink>
 
+
                     </ul>
                 </div>
                 <a className="logo text-2xl lg:text-4xl bg-gradient-to-r from-green-400 via-yellow-600 to-indigo-400 inline-block text-transparent bg-clip-text">Foods Restaurant</a>
@@ -55,10 +56,11 @@ const Header = () => {
                     >
                         Blogs
                     </NavLink>
+
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link><button className="btn btn-warning hover:btn-outline mx-5 btn-sm px-4">Login</button></Link>
+                <Link to='/login'><button className="btn btn-warning hover:btn-outline mx-5 btn-sm px-4">Login</button></Link>
                 <p>{user && user.name}</p>
             </div>
         </div>
