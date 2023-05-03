@@ -11,7 +11,7 @@ const HomePage = () => {
     const [allChef, setAllChef] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allChefData`)
+        fetch(`https://server-rubelmasud.vercel.app/allChefData`)
             .then(res => res.json())
             .then(data => setAllChef(data))
     }, [])

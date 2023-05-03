@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = () => {
 
-    const { signIn } = useContext(AuthContext)
+    const { signIn, signInGoogle } = useContext(AuthContext)
     const [error, setError] = useState('')
     const navigate = useNavigate()
     const location = useLocation()
@@ -35,6 +35,17 @@ const LoginPage = () => {
                 setError(error.message)
             })
 
+    }
+
+    const handleSignInToGoogle = () => {
+        signInGoogle()
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
     }
 
     return (
@@ -69,7 +80,7 @@ const LoginPage = () => {
                 </div>
             </div>
             <div className=" rounded-xl w-4/12 mx-auto bg-slate-400">
-                <Link> <button className="btn glass w-full text-black "><FaGoogle className='mx-4 w-7 h-7 text-green-600'></FaGoogle> Continue with Google </button></Link>
+                <Link> <button onClick={handleSignInToGoogle} className="btn glass w-full text-black "><FaGoogle className='mx-4 w-7 h-7 text-green-600'></FaGoogle> Continue with Google </button></Link>
             </div>
             <div className="rounded-xl bg-slate-400  w-4/12 mx-auto my-4">
                 <button className="btn glass w-full text-black "><FaGithub className='mx-4 w-7 h-7 text-white'></FaGithub> Continue with Github</button>

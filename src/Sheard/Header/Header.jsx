@@ -70,7 +70,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                {user && <FaUserAlt title={user.displayName} className='text-white w-6 h-6'></FaUserAlt>}
+                {user && <FaUserAlt title='kguoco' className='text-white w-6 h-6'></FaUserAlt>}
                 {
                     user ?
                         <Link><button onClick={handleLogout} className="btn btn-warning mx-5 btn-sm px-4">Log out</button></Link>
