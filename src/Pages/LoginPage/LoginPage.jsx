@@ -3,6 +3,7 @@ import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from '../../Providar/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = () => {
 
@@ -24,9 +25,10 @@ const LoginPage = () => {
 
         signIn(email, password)
             .then((result) => {
-                const loggedUser = result.user;
-                toast("Login Is Sussesfully!");
+                result.user;
                 navigate(from, { replace: true })
+                toast("Login Is Susses fully!");
+                alert('Login SussesFully ')
             })
             .catch((error) => {
                 console.log(error);
@@ -55,7 +57,7 @@ const LoginPage = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" name='password' placeholder="password" className="input input-bordered" required />
+                                <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                             </div>
                             <p>Dont’t Have An Account ? <Link to='/register' className="link link-primary">Register</Link></p>
                             <div className="form-control mt-6">
@@ -63,7 +65,6 @@ const LoginPage = () => {
                             </div>
                             <p className='text-red-600'>{error}</p>
                         </Form>
-                        <ToastContainer></ToastContainer>
                     </div>
                 </div>
             </div>
@@ -73,7 +74,7 @@ const LoginPage = () => {
             <div className="rounded-xl bg-slate-400  w-4/12 mx-auto my-4">
                 <button className="btn glass w-full text-black "><FaGithub className='mx-4 w-7 h-7 text-white'></FaGithub> Continue with Github</button>
             </div>
-
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

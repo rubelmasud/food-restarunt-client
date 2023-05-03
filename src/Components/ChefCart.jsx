@@ -8,8 +8,8 @@ const ChefCart = ({ singleChef }) => {
     return (
         <div>
             <div className="shadow lg:h-52 hover:text-orange-700 my-2 rounded lg:flex gap-2 hover:-translate-y-4 duration-500 hover:bg-orange-100">
-                <LazyLoad height={762} width={190} threshold={0.55} offset={100}>
-                    <img className='h-48 w-48 mb-2 mt-2 rounded mx-auto' src={img} alt="" />
+                <LazyLoad lg:height={900} width={190} threshold={1.0} offset={100}>
+                    <img className='h-48 w-48 mb-2  mt-2 rounded ml-6 lg:ml-0' src={img} alt="" />
                 </LazyLoad>
 
                 <div className="text-center lg:text-left mr-2 mt-2 flex flex-col justify-between">

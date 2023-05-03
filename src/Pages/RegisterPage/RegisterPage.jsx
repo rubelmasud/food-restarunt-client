@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Form, Link } from 'react-router-dom';
+import { Form, Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providar/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -7,8 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const RegisterPage = () => {
     const { createUser, userProfile } = useContext(AuthContext)
     const [error, setError] = useState('')
-
-
+    const navigate = useNavigate()
 
 
     const handleRegister = (event) => {
@@ -33,6 +32,7 @@ const RegisterPage = () => {
                 setError('')
                 event.target.reset();
                 toast("Your Register Sussesfully!");
+                navigate('/')
             })
             .catch((error) => {
                 console.log(error);
@@ -76,7 +76,7 @@ const RegisterPage = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" name='password' placeholder="password" className="input input-bordered" required />
+                                <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                             </div>
                             <p>Already Have An Account ? <Link to='/login' className="link link-primary">Login</Link></p>
                             <div className="form-control mt-6">

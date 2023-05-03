@@ -32,7 +32,7 @@ const ChefDetails = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-12 mb-6">
                 {
                     recipe.map(item =>
-                        <RecipeCard item={item}></RecipeCard>
+                        <RecipeCard key={item.id} item={item}></RecipeCard>
                     )
                 }
             </div>
