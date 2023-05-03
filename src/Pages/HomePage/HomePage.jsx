@@ -5,6 +5,7 @@ import ChefCart from '../../Components/ChefCart';
 import AboutUs from '../../Components/AboutUs';
 
 
+
 const HomePage = () => {
 
     const [allChef, setAllChef] = useState([])
@@ -52,6 +53,7 @@ const HomePage = () => {
                 </div>
                 {/* about section */}
                 <AboutUs></AboutUs>
+
             </main>
         </>
     );

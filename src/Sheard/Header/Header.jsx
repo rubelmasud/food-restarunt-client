@@ -1,14 +1,24 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Providar/AuthProvider';
+import { FaUserAlt } from 'react-icons/fa';
 
 const Header = () => {
 
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+
     console.log(user);
+    const handleLogout = () => {
+        logOut()
+            .then()
+            .catch((error) => {
+                console.log(error);
+            })
+    }
+
     return (
 
-        <div className="navbar w-11/12 mx-auto my-2">
+        <div className="navbar w-11/12 mx-auto ">
             <div className="navbar-start ">
                 <div className="dropdown ">
                     <label tabIndex={0} className="btn btn-ghost text-white  lg:hidden">
@@ -60,8 +70,13 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='login'><button className="btn btn-warning hover:btn-outline mx-5 btn-sm px-4">Login</button></Link>
-                <p>{user && user.name}</p>
+                {user && <FaUserAlt title={user.displayName} className='text-white w-6 h-6'></FaUserAlt>}
+                {
+                    user ?
+                        <Link><button onClick={handleLogout} className="btn btn-warning mx-5 btn-sm px-4">Log out</button></Link>
+                        : <Link to='login'><button className="btn btn-warning mx-5 btn-sm px-4">Login</button></Link>
+                }
+
             </div>
         </div>
 
