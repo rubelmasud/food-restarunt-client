@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = () => {
 
-    const { signIn, signInGoogle } = useContext(AuthContext)
+    const { signIn, signInGoogle, signInGithub } = useContext(AuthContext)
     const [error, setError] = useState('')
     const navigate = useNavigate()
     const location = useLocation()
@@ -45,6 +45,19 @@ const LoginPage = () => {
             })
             .catch((error) => {
                 console.log(error);
+                setError(error.message)
+            })
+    }
+
+    const handleSignInToGithub = () => {
+        signInGithub()
+            .then((result) => {
+                const githubUser = result.user
+                console.log(githubUser);
+            })
+            .catch((error) => {
+                console.log(error);
+                setError(error.message)
             })
     }
 
@@ -83,11 +96,11 @@ const LoginPage = () => {
                 <Link> <button onClick={handleSignInToGoogle} className="btn glass w-full text-black "><FaGoogle className='mx-4 w-7 h-7 text-green-600'></FaGoogle> Continue with Google </button></Link>
             </div>
             <div className="rounded-xl bg-slate-400  w-4/12 mx-auto my-4">
-                <button className="btn glass w-full text-black "><FaGithub className='mx-4 w-7 h-7 text-white'></FaGithub> Continue with Github</button>
+                <button onClick={handleSignInToGithub} className="btn glass w-full text-black "><FaGithub className='mx-4 w-7 h-7 text-white'></FaGithub> Continue with Github</button>
             </div>
             <ToastContainer></ToastContainer>
         </div>
     );
 };
 
-export default LoginPage;
+export default LoginPage

@@ -6,7 +6,7 @@ import { FaUserAlt } from 'react-icons/fa';
 const Header = () => {
 
     const { user, logOut } = useContext(AuthContext);
-
+    console.log(user);
 
     const handleLogout = () => {
         logOut()
@@ -70,7 +70,11 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                {user && <FaUserAlt title='kguoco' className='text-white w-6 h-6'></FaUserAlt>}
+
+                {user ? <img title={user?.displayName} className='w-10 h-10 rounded-full' src={user?.photoURL} alt=''></img> :
+                    <FaUserAlt title={user?.displayName || 'null'} className='text-white'></FaUserAlt>
+                }
+
                 {
                     user ?
                         <Link><button onClick={handleLogout} className="btn btn-warning mx-5 btn-sm px-4">Log out</button></Link>
