@@ -26,7 +26,7 @@ const RecipeCard = ({ item }) => {
                     <p >{howMake}</p>
                 </div>
                 <div className="card-actions  absolute  bottom-0">
-                    <p className='text-secondary flex items-center gap-3'><Rating style={{ maxWidth: 100 }} value={ratting} /> {ratting}</p>
+                    <p className='text-secondary flex items-center gap-3'><Rating readOnly style={{ maxWidth: 100 }} value={ratting} /> {ratting}</p>
                     <button onClick={handleDesible} disabled={disabled} className="btn btn-sm btn-outline btn-secondary ">Favorite </button>
                 </div>
                 <ToastContainer></ToastContainer>
