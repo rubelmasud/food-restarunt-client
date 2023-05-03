@@ -3,6 +3,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick'
 import img1 from '../Images/images.jpg'
+import food1 from '../Images/1.jpg'
+import food2 from '../Images/2.jpg'
+import food3 from '../Images/3.jpg'
+import food4 from '../Images/4.jpg'
+import food5 from '../Images/5.jpg'
+
 
 const FoodSlider = () => {
 
@@ -17,8 +23,8 @@ const FoodSlider = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                     infinite: true,
                     dots: true
                 }
@@ -26,9 +32,9 @@ const FoodSlider = () => {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1
                 }
             },
             {
@@ -44,31 +50,37 @@ const FoodSlider = () => {
         <div>
             <Slider {...settings}>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className=' rounded shadow ' src={img1} alt="" />
+                    <img className='h-56 w-64 rounded shadow ' src={img1} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className=' rounded shadow' src={img1} alt="" />
+                    <img className='h-56 w-64  rounded shadow' src={food1} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className=' rounded shadow' src={img1} alt="" />
+                    <img className='h-56 w-64  rounded shadow' src={food2} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className=' rounded shadow' src={img1} alt="" />
+                    <img className='h-56 w-64  rounded shadow' src={food3} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className=' rounded shadow' src={img1} alt="" />
+                    <img className='h-56 w-64  rounded shadow' src={food4} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className=' rounded shadow' src={img1} alt="" />
+                    <img className='h-56 w-64  rounded shadow' src={food5} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className=' rounded shadow' src={img1} alt="" />
+                    <img className='h-56 w-64  rounded shadow' src={food1} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className=' rounded shadow' src={img1} alt="" />
+                    <img className='h-56 w-64  rounded shadow' src={food3} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className=' rounded shadow' src={img1} alt="" />
+                    <img className='h-56 w-64  rounded shadow' src={img1} alt="" />
+                </div>
+                <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
+                    <img className='h-56 w-64  rounded shadow' src={food1} alt="" />
+                </div>
+                <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
+                    <img className='h-56 w-64  rounded shadow' src={food5} alt="" />
                 </div>
 
             </Slider>
