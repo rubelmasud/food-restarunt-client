@@ -7,4 +7,4 @@
    - This project in Home page add to navbar,banner,foods slider section,restaurant chef services section,about us section and footer...
    - This project add to firebase in login system Email/Password,google and github..
 ## Live link
-- [live-link](http://localhost:5173/)
+- [live-link](https://foods-restaurant-assignment-10.web.app/)
