@@ -1,13 +1,17 @@
 import React from 'react';
 import { FaDownload } from 'react-icons/fa';
+import Pdf from "react-to-pdf";
+const ref = React.createRef();
 
 const BlogPage = () => {
     return (
-        <div className='my-6'>
-            <button className="btn btn-sm btn-warning"><FaDownload className=''></FaDownload> Download pdf</button>
-            <div className="px-12 pt-24 flex flex-col justify-center mb-6 gap-4">
-                <h1 className='text-center headding'>Simple Fourth Quertion !!!</h1>
+        <div className='mt-12 px-12 '>
+            <Pdf targetRef={ref} filename="code-example.pdf">
+                {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
+            </Pdf>
 
+            <div className=" pt-6 flex flex-col  mb-6 ref={ref}">
+                <h1 className='text-center headding'>Simple Fourth Quertion !!!</h1>
                 {/* The button to open modal */}
                 <label htmlFor="my-modal-3" className="btn my-3 lg:w-6/12">1- Tell us the differences between uncontrolled and controlled components?</label>
 
@@ -64,6 +68,11 @@ const BlogPage = () => {
                         <p className="py-4">Custom React JS hooks offer reusability as when a custom hook is created, it can be reused easily, which makes the code cleaner and reduces the time to write the code. It also enhances the rendering speed of the code as a custom hook does not need to be rendered again and again while rendering the whole code</p>
                     </label>
                 </label>
+            </div>
+
+            {/* pdf button */}
+            <div className="justify-end">
+                <button className="btn btn-sm btn-warning"><FaDownload className=''></FaDownload> Download pdf</button>
             </div>
 
         </div >

@@ -77,8 +77,8 @@ const Header = () => {
 
                 {
                     user ?
-                        <Link><button onClick={handleLogout} className="btn btn-warning mx-5 btn-sm px-4">Log out</button></Link>
-                        : <Link to='login'><button className="btn btn-warning mx-5 btn-sm px-4">Login</button></Link>
+                        <Link><button onClick={handleLogout} className="btn btn-warning mx-3 btn-sm px-2">Log out</button></Link>
+                        : <Link to='login'><button className="btn btn-warning mx-3 btn-sm px-4">Login</button></Link>
                 }
 
             </div>

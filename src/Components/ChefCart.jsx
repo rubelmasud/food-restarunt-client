@@ -2,6 +2,7 @@ import React from 'react';
 import { HandThumbUpIcon } from '@heroicons/react/24/solid'
 import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazy-load';
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 
 const ChefCart = ({ singleChef }) => {
     const { id, img, ChefName, Years_of_experience, Numbers_of_recipes, Likes } = singleChef
@@ -18,6 +19,7 @@ const ChefCart = ({ singleChef }) => {
                         <p><small>Experience : {Years_of_experience} year</small></p>
                         <p><small>Recipes Items :{Numbers_of_recipes}</small></p>
                         <p className='flex items-center gap-2 ml-16 lg:ml-4'><HandThumbUpIcon className="h-4 w-4 text-blue-500" /><small>{Likes}</small></p>
+
                     </div>
                     <div className="mb-5 ">
                         <Link to={`/singleChef/${singleChef.id}`}> <button className="btn btn-outline  btn-sm btn-primary">View Recipes</button></Link>
