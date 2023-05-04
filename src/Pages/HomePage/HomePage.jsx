@@ -31,7 +31,7 @@ const HomePage = () => {
             </div>
             <main className=''>
                 {/* foods section */}
-                <div className="mt-36 mx-12 text-amber-500 px-6 font-mono rounded">
+                <div className="mt-36 mx-12 bg-slate-100 text-amber-500 px-6 font-mono rounded">
                     <h1 className='text-center text-3xl font-bold underline pt-6 my-12'>My Restaurant Foods !!!</h1>
                     <FoodSlider></FoodSlider>
                 </div>

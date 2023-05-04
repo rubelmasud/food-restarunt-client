@@ -6,11 +6,9 @@ const ref = React.createRef();
 const BlogPage = () => {
     return (
         <div className='mt-12 px-12 '>
-            <Pdf targetRef={ref} filename="code-example.pdf">
-                {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
-            </Pdf>
 
-            <div className=" pt-6 flex flex-col  mb-6 ref={ref}">
+
+            <div className=" pt-6 flex flex-col  mb-6 ">
                 <h1 className='text-center headding'>Simple Fourth Quertion !!!</h1>
                 {/* The button to open modal */}
                 <label htmlFor="my-modal-3" className="btn my-3 lg:w-6/12">1- Tell us the differences between uncontrolled and controlled components?</label>
