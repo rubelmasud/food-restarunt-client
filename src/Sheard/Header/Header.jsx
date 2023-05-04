@@ -46,7 +46,7 @@ const Header = () => {
 
                     </ul>
                 </div>
-                <a className="logo text-2xl lg:text-4xl bg-gradient-to-r from-green-400 via-yellow-600 to-indigo-400 inline-block text-transparent bg-clip-text">Foods Restaurant</a>
+                <a className="logo text-2xl lg:text-4xl text-warning">Foods Restaurant</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal lg:flex gap-4">
@@ -71,7 +71,7 @@ const Header = () => {
             </div>
             <div className="navbar-end">
 
-                {user ? <img title={user?.displayName} className='w-10 h-10 rounded-full' src={user?.photoURL} alt=''></img> :
+                {user ? <img title={user?.displayName} className='w-10 h-10 rounded-full' src={user?.photoURL} alt={user?.displayName}></img> :
                     <FaUserAlt title={user?.displayName || 'null'} className='text-white'></FaUserAlt>
                 }
 

@@ -23,6 +23,10 @@ const LoginPage = () => {
 
         setError('')
 
+        if (password < 6) {
+            setError('The password is less than 6 characters')
+        }
+
         signIn(email, password)
             .then((result) => {
                 result.user;
@@ -31,8 +35,8 @@ const LoginPage = () => {
                 alert('Login SussesFully ')
             })
             .catch((error) => {
-                console.log(error);
-                setError(error.message)
+                // console.log(error);
+                // setError(error.message)
             })
 
     }
@@ -42,10 +46,13 @@ const LoginPage = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user);
+                navigate(from, { replace: true })
+                toast("Login Is Susses fully!");
+                alert('Login SussesFully ')
             })
             .catch((error) => {
                 console.log(error);
-                setError(error.message)
+
             })
     }
 
@@ -54,10 +61,13 @@ const LoginPage = () => {
             .then((result) => {
                 const githubUser = result.user
                 console.log(githubUser);
+                navigate(from, { replace: true })
+                toast("Login Is Susses fully!");
+                alert('Login SussesFully ')
             })
             .catch((error) => {
                 console.log(error);
-                setError(error.message)
+
             })
     }
 

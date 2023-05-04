@@ -7,7 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
 
 .active {
@@ -58,6 +58,6 @@
 }
 
 .headding {
-    color: bisque;
+    color: rgb(240, 136, 9);
     font-size: x-large;
 }

@@ -3,12 +3,12 @@ import { FaCopyright, FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'reac
 
 const Footer = () => {
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 py-6 items-center bg-slate-100'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 py-6 bg-slate-100'>
             <div className="">
                 <h1 className='text-4xl font-bold font-mono animate-text bg-gradient-to-r from-orange-500 via-purple-500 to-orange-500 bg-clip-text text-transparent '> Indian Foods Restaurant</h1>
             </div>
             <div className="">
-                <h4 className='text-2xl font-bold font-mono underline text-amber-500'>My Restaurant Foods</h4>
+                <h4 className='text-2xl mb-4 font-bold font-mono underline text-amber-500'>My Restaurant Foods</h4>
                 <ul className='text-gray-400'>
                     <li>Mughali Chicken</li>
                     <li>Samosas</li>

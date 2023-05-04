@@ -21,7 +21,7 @@ const HomePage = () => {
         <>
             <div className='lg:flex grid grid-cols-1 lg:grid-cols-2 w-11/12 mx-auto my-20 items-center'>
                 <div className="lg:w-6/12">
-                    <h1 className='text-4xl font-mono font-bold text-warning'>Welcome To Your <span className='animate-text bg-gradient-to-r from-orange-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-4xl'>Food Restaurant</span></h1>
+                    <h1 className='text-4xl font-mono font-bold text-warning'>Welcome To Your <span className=' text-4xl'>Food Restaurant</span></h1>
                     <p className='text-white my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum beatae ad obcaecati. Eos libero itaque necessitatibus hic alias magnam tempore earum modi, consequuntur repellendus odio neque ratione ex rerum tempora.</p>
                     <button className="btn btn-outline btn-warning">Check Menu</button>
                 </div>

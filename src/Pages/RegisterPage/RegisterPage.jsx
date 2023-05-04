@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const RegisterPage = () => {
-    const { createUser, userProfile } = useContext(AuthContext)
+    const { createUser, updateUserProfile } = useContext(AuthContext)
     const [error, setError] = useState('')
     const navigate = useNavigate()
 
@@ -28,7 +28,7 @@ const RegisterPage = () => {
 
         createUser(email, password)
             .then((result) => {
-                const createdUser = result.user;
+                result.user;
                 setError('')
                 event.target.reset();
                 toast("Your Register Sussesfully!");
@@ -41,7 +41,15 @@ const RegisterPage = () => {
 
 
         // user profile
-        userProfile(photoUrl)
+        updateUserProfile({ displayName: name, photoURL: photoUrl })
+            .then((result) => {
+                const profile = result.user
+                console.log(profile);
+            }).catch((error) => {
+                console.log(error);
+                // An error occurred
+                // ...
+            });
     }
 
     return (

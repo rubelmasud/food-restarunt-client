@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 import { ToastContainer, toast } from 'react-toastify';
+import { FaHeart } from 'react-icons/fa';
 
 const RecipeCard = ({ item }) => {
     const { foodName, img, howMake, ratting } = item
@@ -27,7 +28,7 @@ const RecipeCard = ({ item }) => {
                 </div>
                 <div className="card-actions  absolute  bottom-0">
                     <p className='text-secondary flex items-center gap-3'><Rating readOnly style={{ maxWidth: 100 }} value={ratting} /> {ratting}</p>
-                    <button onClick={handleDesible} disabled={disabled} className="btn btn-sm btn-outline btn-secondary ">Favorite </button>
+                    <button onClick={handleDesible} disabled={disabled} className="btn btn-sm btn-outline btn-secondary ">Favorite <FaHeart className='w-3 h-3 ml-2 '></FaHeart></button>
                 </div>
                 <ToastContainer></ToastContainer>
             </div>
