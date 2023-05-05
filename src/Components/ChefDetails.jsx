@@ -3,11 +3,13 @@ import React from 'react';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import RecipeCard from './RecipeCard';
 import { FaCalculator, FaFacebook, FaInstagram, FaShoppingBag, FaTwitter, FaUserAlt, FaYoutube } from 'react-icons/fa';
+import useTitle from '../Hooks/useTitle';
 
 const ChefDetails = () => {
 
     // const { id } = useParams();
     const ChefData = useLoaderData();
+    useTitle('chef-Details')
 
     const { img, ChefName, Years_of_experience, Numbers_of_recipes, Likes, description, recipe } = ChefData
 
@@ -28,7 +30,7 @@ const ChefDetails = () => {
                             <small>  {Likes} Likes</small>
                         </p>
                     </div>
-                    <div className="flex gap-8 ml-8 ">
+                    <div className="flex  gap-8 ml-8 ">
                         <Link to='https://web.facebook.com/'>    <FaFacebook className='w-5 h-5 text-blue-600'></FaFacebook></Link>
                         <Link to='https://www.youtube.com/'>  <FaYoutube className='w-5 h-5 text-rose-600' ></FaYoutube></Link>
                         <Link to='https://twitter.com/'><FaTwitter className='w-5 h-5 text-slate-500'></FaTwitter></Link>

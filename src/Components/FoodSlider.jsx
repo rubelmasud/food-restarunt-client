@@ -50,37 +50,37 @@ const FoodSlider = () => {
         <div>
             <Slider {...settings}>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className='h-56 w-64 rounded shadow ' src={img1} alt="" />
+                    <img className='h-40 w-64 rounded shadow ' src={img1} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className='h-56 w-64  rounded shadow' src={food1} alt="" />
+                    <img className='h-40 w-64  rounded shadow' src={food1} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className='h-56 w-64  rounded shadow' src={food2} alt="" />
+                    <img className='h-40 w-64  rounded shadow' src={food2} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className='h-56 w-64  rounded shadow' src={food3} alt="" />
+                    <img className='h-40 w-64  rounded shadow' src={food3} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className='h-56 w-64  rounded shadow' src={food4} alt="" />
+                    <img className='h-40 w-64  rounded shadow' src={food4} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className='h-56 w-64  rounded shadow' src={food5} alt="" />
+                    <img className='h-40 w-64  rounded shadow' src={food5} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className='h-56 w-64  rounded shadow' src={food1} alt="" />
+                    <img className='h-40 w-64  rounded shadow' src={food1} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className='h-56 w-64  rounded shadow' src={food3} alt="" />
+                    <img className='h-40 w-64  rounded shadow' src={food3} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className='h-56 w-64  rounded shadow' src={img1} alt="" />
+                    <img className='h-40 w-64  rounded shadow' src={img1} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className='h-56 w-64  rounded shadow' src={food1} alt="" />
+                    <img className='h-40 w-64  rounded shadow' src={food1} alt="" />
                 </div>
                 <div className='hover:opacity-60 duration-75 hover:-translate-y-3'>
-                    <img className='h-56 w-64  rounded shadow' src={food5} alt="" />
+                    <img className='h-40 w-64  rounded shadow' src={food5} alt="" />
                 </div>
 
             </Slider>

@@ -66,6 +66,12 @@ const Header = () => {
                     >
                         Blogs
                     </NavLink>
+                    <li className='text-gray-300 font-semibold'>
+                        Contact
+                    </li>
+                    <li className='text-gray-300 font-semibold'>
+                        Services
+                    </li>
 
                 </ul>
             </div>

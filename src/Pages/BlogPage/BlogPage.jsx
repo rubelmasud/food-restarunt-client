@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { FaDownload } from 'react-icons/fa';
-import Pdf from "react-to-pdf";
-const ref = React.createRef();
+import useTitle from '../../Hooks/useTitle';
+
 
 const BlogPage = () => {
+
+    useTitle('blog')
     return (
-        <div className='mt-12 px-12 '>
 
-
-            <div className=" pt-6 flex flex-col  mb-6 ">
+        <div className='mt-12 px-12  '>
+            <div className=" pt-6 flex flex-col  mb-6  ">
                 <h1 className='text-center headding'>Simple Fourth Quertion !!!</h1>
                 {/* The button to open modal */}
                 <label htmlFor="my-modal-3" className="btn my-3 lg:w-6/12">1- Tell us the differences between uncontrolled and controlled components?</label>

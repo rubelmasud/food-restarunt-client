@@ -4,6 +4,7 @@ import { FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from '../../Providar/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useTitle from '../../Hooks/useTitle';
 
 const LoginPage = () => {
 
@@ -12,6 +13,7 @@ const LoginPage = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || "/"
+    useTitle('login')
 
 
     const handleSignIn = (event) => {

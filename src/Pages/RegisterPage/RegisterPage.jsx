@@ -3,11 +3,13 @@ import { Form, Link, Navigate, useLocation, useNavigate } from 'react-router-dom
 import { AuthContext } from '../../Providar/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useTitle from '../../Hooks/useTitle';
 
 const RegisterPage = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext)
     const [error, setError] = useState('')
     const navigate = useNavigate()
+    useTitle('register')
 
 
     const handleRegister = (event) => {

@@ -3,12 +3,13 @@ import img from '../../Images/R__1_-removebg-preview.png'
 import FoodSlider from '../../Components/FoodSlider';
 import ChefCart from '../../Components/ChefCart';
 import AboutUs from '../../Components/AboutUs';
+import useTitle from '../../Hooks/useTitle';
 
 
 
 const HomePage = () => {
-
     const [allChef, setAllChef] = useState([])
+    useTitle('home')
 
     useEffect(() => {
         fetch(`https://server-rubelmasud.vercel.app/allChefData`)
