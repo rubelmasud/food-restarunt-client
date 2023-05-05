@@ -23,7 +23,7 @@ const HomePage = () => {
             <div className='lg:flex grid grid-cols-1 lg:grid-cols-2 w-11/12 mx-auto my-20 items-center'>
                 <div className="lg:w-6/12">
                     <h1 className='text-4xl font-mono font-bold text-warning'>Welcome To Your <span className=' text-4xl'>Food Restaurant</span></h1>
-                    <p className='text-white my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum beatae ad obcaecati. Eos libero itaque necessitatibus hic alias magnam tempore earum modi, consequuntur repellendus odio neque ratione ex rerum tempora.</p>
+                    <p className='text-white my-3'>This is the story of the great war that Rikki-tikki-tavi fought single-handed, through the bath-rooms of the big bungalow in Segowlee cantonment. Darzee, the tailor-bird, helped him, and Chuchundra, the musk-rat, who never comes out into the middle of the floor, but always creeps round by the wall, gave him advice; but Rikki-tikki did the real </p>
                     <button className="btn btn-outline btn-warning btn-sm">Check Menu</button>
                 </div>
                 <div className="mx-5">

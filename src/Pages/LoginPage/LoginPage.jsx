@@ -74,10 +74,10 @@ const LoginPage = () => {
     }
 
     return (
-        <div className='bg-base-200'>
-            <div className="hero lg:min-h-screen">
+        <div className='bg-base-200 mb-0'>
+            <div className="hero ">
                 <div className="hero-content flex-col lg:w-6/12 ">
-                    <div className="text-center lg:text-left">
+                    <div className="text-center">
                         <h1 className="text-5xl font-bold">Login now!</h1>
 
                     </div>
@@ -100,6 +100,7 @@ const LoginPage = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                             <p className='text-red-600'>{error}</p>
+
                         </Form>
                     </div>
                 </div>

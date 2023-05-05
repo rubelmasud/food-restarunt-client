@@ -47,17 +47,22 @@
     margin-bottom: 10px;
 }
 
-.blog-card {
-    border: 1px dashed white;
-    background-color: rgba(105, 105, 105, 0.836);
-    color: wheat;
-    font-weight: 400;
-    margin: 20px 10px;
-    border-radius: 10px;
-    padding: 20px;
-}
+
 
 .headding {
     color: rgb(240, 136, 9);
     font-size: x-large;
+}
+
+.blog-card {
+    border: 1px solid black;
+    margin: 5px 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.question {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
