@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
-import { FaGithub, FaGoogle } from "react-icons/fa";
+import { FaEye, FaGithub, FaGoogle, FaRegEyeSlash } from "react-icons/fa";
 import { AuthContext } from '../../Providar/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,6 +8,8 @@ import useTitle from '../../Hooks/useTitle';
 
 const LoginPage = () => {
 
+
+    const [showPassword, setShowPassword] = useState(false)
     const { signIn, signInGoogle, signInGithub } = useContext(AuthContext)
     const [error, setError] = useState('')
     const navigate = useNavigate()
@@ -33,12 +35,12 @@ const LoginPage = () => {
             .then((result) => {
                 result.user;
                 navigate(from, { replace: true })
-                toast("Login Is Susses fully!");
                 alert('Login SussesFully ')
+                toast("Login Is Susses fully!");
             })
             .catch((error) => {
-                // console.log(error);
-                // setError(error.message)
+                console.log(error);
+                setError(error.message)
             })
 
     }
@@ -88,12 +90,19 @@ const LoginPage = () => {
                                     <span className="label-text">Email</span>
                                 </label>
                                 <input type="email" name='email' placeholder="email" className="input input-bordered" required />
+
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                                <input type={showPassword ? 'text' : 'password'} name='password' placeholder="password" className="input input-bordered" required />
+                                <p onClick={() => setShowPassword(!showPassword)}><small>
+                                    {
+                                        showPassword ? <small className='flex items-center gap-1 mt-2'><FaEye></FaEye> Show password</small>
+                                            : <small className='flex items-center gap-1 mt-2'><FaEye></FaEye> Hide Password</small>
+                                    }
+                                </small></p>
                             </div>
                             <p>Dont’t Have An Account ? <Link to='/register' className="link link-primary">Register</Link></p>
                             <div className="form-control mt-6">

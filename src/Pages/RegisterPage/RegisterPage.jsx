@@ -16,7 +16,6 @@ const RegisterPage = () => {
         event.preventDefault()
 
         setError('')
-
         const form = event.target;
         const name = form.name.value;
         const photoUrl = form.photoUrl.value
@@ -27,14 +26,17 @@ const RegisterPage = () => {
             setError('Place add at least Uppercase');
             return
         }
+        else {
+            toast("Your Register Sussesfully!");
+        }
 
         createUser(email, password)
             .then((result) => {
+                updateUserProfile(result.user, name, photoUrl)
                 result.user;
-                setError('')
                 event.target.reset();
-                toast("Your Register Sussesfully!");
                 navigate('/')
+                setError('')
             })
             .catch((error) => {
                 console.log(error);
@@ -43,15 +45,13 @@ const RegisterPage = () => {
 
 
         // user profile
-        updateUserProfile({ displayName: name, photoURL: photoUrl })
-            .then((result) => {
-                const profile = result.user
-                console.log(profile);
-            }).catch((error) => {
+        updateUserProfile({ displayName: name, url: photoUrl })
+            .then(() => {
+                console.log('user update done');
+            })
+            .catch((error) => {
                 console.log(error);
-                // An error occurred
-                // ...
-            });
+            })
     }
 
     return (

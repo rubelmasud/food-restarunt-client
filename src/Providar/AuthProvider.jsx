@@ -32,8 +32,12 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, GithubProvider)
     }
 
-    const updateUserProfile = () => {
-        return updateProfile(auth.createUser)
+    const updateUserProfile = (user, name, url) => {
+        return updateProfile(user, {
+            displayName: name,
+            photoURL: url
+        })
+
     }
 
     const logOut = () => {

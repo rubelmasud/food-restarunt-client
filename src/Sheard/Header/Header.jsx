@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Providar/AuthProvider';
 import { FaUserAlt } from 'react-icons/fa';
+import img from '../../Images/3.jpg'
 
 const Header = () => {
 
@@ -66,29 +67,21 @@ const Header = () => {
                     >
                         Blogs
                     </NavLink>
-                    <li className='text-gray-300 font-semibold'>
-                        Contact
-                    </li>
-                    <li className='text-gray-300 font-semibold'>
-                        Services
-                    </li>
 
                 </ul>
             </div>
             <div className="navbar-end">
 
-                {user ? <img title={user?.displayName} className='w-10 h-10 rounded-full' src={user?.photoURL} alt={user?.displayName}></img> :
-                    <FaUserAlt title={user?.displayName || 'null'} className='text-white'></FaUserAlt>
-                }
+                {user && <img title={user?.displayName} className='w-10 h-10 rounded-full' src={user?.photoURL} alt='' />}
 
                 {
                     user ?
-                        <Link><button onClick={handleLogout} className="btn btn-warning mx-3 btn-sm px-2">Log out</button></Link>
+                        <Link>< button onClick={handleLogout} className="btn btn-warning mx-3 btn-sm px-2">Log out</button></Link>
                         : <Link to='login'><button className="btn btn-warning mx-3 btn-sm px-4">Login</button></Link>
                 }
 
-            </div>
-        </div>
+            </div >
+        </div >
 
     );
 };
